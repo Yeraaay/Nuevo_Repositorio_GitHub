@@ -16,8 +16,9 @@ public class Calculadora {
                     + "(PULSA 2) Restar. \n"
                     + "(PULSA 3) Mutiplicar. \n"
                     + "(PULSA 4) Dividir. \n"
+                    + "(PULSA 5) Raiz Cuadrada. \n"
                     + "(PULSA 0) Salir. \n");
-
+            
             opcion = sc.next();
 
             switch (opcion) {
@@ -33,6 +34,9 @@ public class Calculadora {
                 case "4":
                     Dividir();
                     break;
+                case "5":
+                	RaizCuadrada();
+                	break;
                 case "0":
                 	System.out.println("Hasta luego!");
                     System.exit(0);
@@ -89,7 +93,13 @@ public class Calculadora {
 		Double divi = n1 / n2;
 		System.out.println("Division: " + DoubletoString(divi));
 	}
-
+	public static void RaizCuadrada() {
+		System.out.println("Introduce un número: ");
+		int raiz_cuadrada = sc.nextInt();
+		Double rq = Math.sqrt(raiz_cuadrada);
+		System.out.println("La raiz cuadrada es: " + DoubletoString(rq));
+	}
+	
 	public static void main(String[] args) {
 
 		Menu();
